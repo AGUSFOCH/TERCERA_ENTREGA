@@ -9,13 +9,14 @@
 <html lang="en">
 <head>
 </head>
-<body>
+
     {% if miFormulario.errors %} 
     
     <p style="color: red;"> Estan mal los datos, revisalos</p>
     
     {% endif %}
-
+    <center>
+        <h3>Introducé  la identificación del pasajero que estas buscando</h3>
     <form action="/buscar/" method="get">
 
         <input type="text" name="id_buscado" id="id_buscado">
@@ -23,6 +24,7 @@
         <input type="submit" value="Buscar">
         
      </form>   
-</body>
+    </center>
+
 </html>
 {% endblock %}

@@ -25,6 +25,6 @@ urlpatterns = [
     path('pasajeroformulario/',views.formulario1), 
     path('hotelesformulario/',views.formulario2),
     path('viajesformulario/',views.formulario3),
-    path('busquedapasajero',views.busqueda_pasajero),
+    path('busquedapasajero/',views.busqueda_pasajero),
     path('buscar/',views.buscar)
     ]
