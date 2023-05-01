@@ -2212,7 +2212,7 @@ textarea.form-control-lg {
 .form-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 40vh;
 }
 
@@ -2367,7 +2367,7 @@ textarea.form-control-lg {
 .form-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 40vh;
 }
 @media (prefers-reduced-motion: reduce) {
