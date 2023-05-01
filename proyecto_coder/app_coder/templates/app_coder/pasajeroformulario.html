@@ -19,6 +19,9 @@
     <p style="color: red;"> Estan mal los datos, revisalos</p>
     
     {% endif %}
+    <center>
+        <h3>Ingresá los datos del pasajero</h3>
+
     <div class="form-container">
     <form action="" method="post">{% csrf_token %}
         <!-- Aca esta la magia de Django-->
@@ -31,7 +34,8 @@
         <input type="submit" value="Enviar">
         
      </form>   
-     <div>
+    </div>
+     </center>
 </html>
 
 {% endblock %}

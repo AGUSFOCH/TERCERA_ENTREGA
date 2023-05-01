@@ -1,14 +1,28 @@
-<!DOCTYPE html>
+
+{% extends "app_coder/padre.html"%}
+{%load static%}
+
+{%block contenidoquecambia %}
+<br>
+<br>
+
 <html lang="en">
 <head>
 </head>
 <body>
-   <form action="/app_coder/buscar/" method="get">
+    {% if miFormulario.errors %} 
+    
+    <p style="color: red;"> Estan mal los datos, revisalos</p>
+    
+    {% endif %}
 
-        <input type="text" name="pasajero_id" id="pasajero_id">
+    <form action="/buscar/" method="get">
+
+        <input type="text" name="id_buscado" id="id_buscado">
 
         <input type="submit" value="Buscar">
         
      </form>   
 </body>
 </html>
+{% endblock %}

@@ -358,12 +358,6 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 button,
 select {
   text-transform: none;
@@ -1994,12 +1988,6 @@ progress {
   font-size: 0.875em;
   color: #6c757d;
 }
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
 .form-control {
   display: block;
@@ -2073,12 +2061,6 @@ progress {
 }
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
-}
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 .form-control-plaintext {
@@ -2231,7 +2213,7 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 40vh;
 }
 
 .form-check-reverse {
@@ -2311,12 +2293,7 @@ textarea.form-control-lg {
   border-radius: 2em;
   transition: background-position 0.15s ease-in-out;
 }
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+
 @media (prefers-reduced-motion: reduce) {
   .form-switch .form-check-input {
     transition: none;
@@ -2391,7 +2368,7 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 40vh;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-range::-webkit-slider-thumb {
@@ -4447,6 +4424,7 @@ textarea.form-control-lg {
 
 .accordion-header {
   margin-bottom: 0;
+  text-align: center
 }
 
 .accordion-item {

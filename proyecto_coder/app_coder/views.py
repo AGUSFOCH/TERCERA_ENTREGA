@@ -70,20 +70,17 @@ def formulario3(request):
     return render(request, "app_coder/viajesformulario.html",{"miformulario3":miformulario3})
 
 
+
 def busqueda_pasajero(request):
      return render(request,'app_coder/busqueda_pasajero.html')  
  
+
 def buscar(request):
-     respuesta= f"Estoy buscando la comision nro: {request.GET['pasajero_id']}"
-     return HttpResponse(respuesta)
-    
-    
-    
-    
-#if request.GET['pasajero_id']:
-#pasajero_id=request.GET['pasajero_id']
-# #pasajeros= Pasajero.objects.filter(pasajero_id__icontains=pasajero_id)
-# return render(request, "app_coder/resultados_busqueda_pasajero.html",{"pasajeros":pasajeros})
-# else:
-# #respuesta="No enviaste datos"
-#return HttpResponse(respuesta)
+    if request.GET['id_buscado']: 
+        id_pasajero = request.GET['id_buscado']
+        resultado= Pasajero.objects.filter(pasajero_id__icontains=id_pasajero)
+        resultado_viajes=viajes.objects.filter(viajes_pasajero_id__icontains=id_pasajero)
+        return render(request,'app_coder/resultado_busqueda_pasajero.html', {"resultado":resultado, "resultado_viajes":resultado_viajes})
+    else:
+        respuesta= "No encontrado"
+        return HttpResponse(respuesta)

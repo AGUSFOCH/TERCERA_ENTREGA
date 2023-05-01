@@ -18,13 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib import admin
 from django.urls import path
-from app_coder.views import inicio,formulario1,formulario2,formulario3,busqueda_pasajero,buscar
+from app_coder import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('inicio/',inicio),
-    path('pasajeroformulario/',formulario1), 
-    path('hotelesformulario/',formulario2),
-    path('viajesformulario/',formulario3),
-    path('busqueda_pasajero/',busqueda_pasajero),
-    path('buscar/',buscar),
+    path('inicio/',views.inicio),
+    path('pasajeroformulario/',views.formulario1), 
+    path('hotelesformulario/',views.formulario2),
+    path('viajesformulario/',views.formulario3),
+    path('busquedapasajero',views.busqueda_pasajero),
+    path('buscar/',views.buscar)
     ]
