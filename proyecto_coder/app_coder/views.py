@@ -38,7 +38,8 @@ def formulario2(request):
       
         if miformulario2.is_valid:
             informacion2=miformulario2.cleaned_data
-            newhotel = Hoteles(str(informacion2["Codigo_de_reserva"]),str(informacion2["Dirección"]),
+            newhotel = Hoteles(str(informacion2["Codigo_de_reserva"]),str(informacion2["Nombre_del_hotel"]), 
+                              str(informacion2["Dirección"]),
                               str(informacion2["Identificación_del_pasajero"]),
                               str(informacion2["Ciudad"]),
                               str(informacion2["Fecha_de_ingreso"]),
@@ -68,3 +69,21 @@ def formulario3(request):
         miformulario3 = viajesformulario()
     return render(request, "app_coder/viajesformulario.html",{"miformulario3":miformulario3})
 
+
+def busqueda_pasajero(request):
+     return render(request,'app_coder/busqueda_pasajero.html')  
+ 
+def buscar(request):
+     respuesta= f"Estoy buscando la comision nro: {request.GET['pasajero_id']}"
+     return HttpResponse(respuesta)
+    
+    
+    
+    
+#if request.GET['pasajero_id']:
+#pasajero_id=request.GET['pasajero_id']
+# #pasajeros= Pasajero.objects.filter(pasajero_id__icontains=pasajero_id)
+# return render(request, "app_coder/resultados_busqueda_pasajero.html",{"pasajeros":pasajeros})
+# else:
+# #respuesta="No enviaste datos"
+#return HttpResponse(respuesta)
